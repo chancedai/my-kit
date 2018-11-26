@@ -1,0 +1,39 @@
+{
+  "name": "my-kit",
+  "version": "1.0.0",
+  "description": "my kit",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "daichang",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-builder": "^20.36.2",
+    "shelljs": "^0.8.3"
+  },
+  "build": {
+    "appId": "com.bq69.my-kit",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  }
+}

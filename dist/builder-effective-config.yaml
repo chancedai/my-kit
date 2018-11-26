@@ -1,0 +1,16 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.bq69.my-kit
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+mac:
+  category: public.app-category.productivity
+  target:
+    - zip
+    - dmg
+electronVersion: 3.0.10
